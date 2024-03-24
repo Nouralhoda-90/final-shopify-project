@@ -1,0 +1,53 @@
+{% comment %}
+  Renders a header search modal. Should be used with 'header.liquid'
+
+  Accepts:
+  - input_id: {String} Id for the search input element (required)
+
+  Usage:
+  {% render 'header-search', input_id: 'My-Id'%}
+{% endcomment %}
+
+{% comment %}
+<details-modal class="header__search">
+  <details open>
+    <form action="/se/sv/sok/" class="qs-form js-qs__form" id="qs-form" method="get" role="search">
+
+
+    {% comment %}
+      <label for="qs-content" class="visuallyhidden">Sök</label>
+    {% endcomment %}  
+
+
+      <div class="search-input-wrapper">
+        <input id="qs-content" type="text" name="q" class="js-qs__content search-field" autocomplete="off" data-url="/se/sv/sok//quicksearch" placeholder="Sök här">
+
+    {% comment %}    
+        <button type="submit" class="search-button" aria-label="{{ 'general.search.search' | t }}">
+          <svg class="icon icon-search" aria-hidden="true" focusable="false">
+            <use href="#icon-search">
+          </svg>
+          <span class="visuallyhidden">Sök</span>
+        </button>
+    {% endcomment %}
+
+      </div>
+      <input id="qs-type" type="hidden" name="type" value="items">
+    </form>
+  </details>
+</details-modal>
+{% endcomment %}
+
+
+<form action="/se/sv/sok/" class="qs-form js-qs__form" id="qs-form" method="get" role="search">           {% comment %} <label for="qs-content" class="visuallyhidden">Sök</label> {% endcomment%}
+
+          <div class="search-input-wrapper">
+            <input id="qs-content" type="text" name="q" class="js-qs__content search-field" autocomplete="off" data-url="/se/sv/sok//quicksearch" placeholder="Sök här">
+            <i class="fas fa-search js-qs__search"></i>
+          </div>
+
+
+            <input id="qs-type" type="hidden" name="type" value="items">
+           {% comment %} <button id="qs-btn" class="js-qs__btn search-button" aria-label="Sök"><i class="fas fa-search js-qs__search"></i> <span class="visuallyhidden">Sök</span></button>{% endcomment%}
+</form>
+
